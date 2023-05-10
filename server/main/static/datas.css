@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1c1c1c;
+}
+
+.nav-menu {
+    background: #222222;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.nav-logo {
+    float: left;
+    margin-left: 80px;
+}
+
+/** ---------------LOGO BUTTON--------------- **/
+.logo-text {
+    position: relative;
+    background: #fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+.logo-text:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.logo-text:before {
+    position: absolute;
+    content: '';
+    inset: 2px;
+    background: #222222;
+}
+
+.logo-text span {
+    position: relative;
+    z-index: 1;
+}
+
+.logo-text i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.logo-text i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: #222222;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.logo-text:hover i::before {
+    width: 20px;
+    left: 20%;   
+}
+
+.logo-text i::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: #222222;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.logo-text:hover i::after {
+    width: 20px;
+    left: 80%;   
+}
+/** ----------------------------------------------------------------------- **/
+
+.nav-items {
+    float: right;
+    margin-right: 80px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-weight: 700;
+}
+
+.passports {
+    text-align: center;
+}
+
+.passports h2 {
+    /* margin-right: 200px; */
+    margin-bottom: 25px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #cac6c6;
+    letter-spacing: 0.2em;
+}
+
+table {
+    width: 90%;
+    border-left: 5px solid #cac6c6;
+    border-right: 5px solid #cac6c6;
+    border-radius: 5px;
+    letter-spacing: 0.05em;
+}
+
+th {
+    color: #cac6c6;
+    height: 40px;
+}
+
+tr {
+    color: #cac6c6;
+    height: 40px;
+}
+
+.passports table {
+    margin: auto;
+}
+
+.update {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: #cac6c6;
+    border-radius: 5px;
+}

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainstyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title> Passport Scanning </title>
+</head>
+<body>
+    <div class="nav-menu">
+        <div class="nav-logo">
+            <a href="{% url 'main' %}" style="--clr:#1e9bff" class="logo-text"><span>FN</span><i></i></a>
+        </div>
+
+        <div class="nav-items">
+            <a href="{% url 'datas' %}" class="nav-item"> Data </a>
+            <a href="https://github.com/nbfaridun" class="nav-item"> GitHub </a>
+            <a href="{% url 'logout' %}" class="nav-item"> Log Out </a>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="header-body">
+
+            <h1> WELCOME </h1>
+
+            <hr>
+
+            <h3> upload passport here </h3>
+
+            <form method="post" enctype="multipart/form-data">
+
+                {% csrf_token %}
+                <br>
+                {{ form.as_p }}
+
+                <br>
+                
+                <button class="selectnone" type="submit">
+                    <span>Submit & Check</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
+                    </svg>
+                </button>
+
+                <p class="ps">© Passport Scanner</p>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

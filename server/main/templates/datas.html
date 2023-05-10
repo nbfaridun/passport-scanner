@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'datas.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title> Passport Scanning </title>
+</head>
+<body>
+    <div class="nav-menu">
+        <div class="nav-logo">
+            <a href="{% url 'main' %}" style="--clr:#1e9bff" class="logo-text"><span>FN</span><i></i></a>
+        </div>
+
+        <div class="nav-items">
+            <a href="{% url 'datas' %}" class="nav-item"> Data </a>
+            <a href="https://github.com/nbfaridun" class="nav-item"> GitHub </a>
+            <a href="{% url 'logout' %}" class="nav-item"> Log Out </a>
+        </div>
+    </div>
+
+    <div class="passports">
+        <h2>Passport List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Issuing Country</th>
+                <th>Surname</th>
+                <th>Name</th>
+                <th>Passport Number</th>
+                <th>Nationality</th>
+                <th>Date of Birth</th>
+                <th>Sex</th>
+                <th>Date of Expiry</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for passport in passports %}
+                <tr>
+                    <td>{{ passport.type }}</td>
+                    <td>{{ passport.issuing_country }}</td>
+                    <td>{{ passport.surname }}</td>
+                    <td>{{ passport.name }}</td>
+                    <td>{{ passport.passport_number }}</td>
+                    <td>{{ passport.nationality }}</td>
+                    <td>{{ passport.dob }}</td>
+                    <td>{{ passport.sex }}</td>
+                    <td>{{ passport.doe }}</td>
+                    <td> <a href="" class="update"> Update </a> </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>

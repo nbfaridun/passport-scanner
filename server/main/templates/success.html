@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'success.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title> Result </title>
+</head>
+<body>
+    <div class="nav-menu">
+        <div class="nav-logo">
+            <a href="{% url 'main' %}" style="--clr:#1e9bff" class="logo-text"><span>FN</span><i></i></a>
+        </div>
+
+        <div class="nav-items">
+            <a href="{% url 'datas' %}" class="nav-item"> Data </a>
+            <a href="https://github.com/nbfaridun" class="nav-item"> GitHub </a>
+            <a href="{% url 'logout' %}" class="nav-item"> Log Out </a>
+        </div>
+    </div>
+
+    <div class="header">
+        <p class="success-text">Passport:</p>
+        <p class="success-text green">Was Successfully Uploaded</p>
+    </div>
+</body>
+</html>
